@@ -1,12 +1,31 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+	<ProjectGuid>EE802222-723A-4810-B903-7FA649F55781</ProjectGuid>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>CodeDesignPlus</Authors>
+    <Description>contiene las interfaces y modelos necsarios para las dierentes restricciones en el SDK</Description>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/diegusweb/CodeDesignPlus.Core</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/diegusweb/CodeDesignPlus.Core</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>CodeDesignPlus Core SDK</PackageTags>
   </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DocumentationFile>..\..\docs\CSharp Doc\CodeDesignPlus.Core.xml</DocumentationFile>
+	</PropertyGroup>	
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.9" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
